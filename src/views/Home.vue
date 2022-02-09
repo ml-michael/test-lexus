@@ -1,22 +1,22 @@
 <template>
-  <div class="home">
+  <div class="page m-5">
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
-          <div class="card-section d-flex justify-content-center align-items-center">
+        <div class="col d-flex justify-content-center align-items-center">
+          <div class="card-section">
             <div class="card border-0" style="width: 24rem;">
               <div class="card-title-section">
-                <h5 class="card-title">{{ pageName }}</h5>
+                <h5 class="card-title font-bold">{{ pageName }}</h5>
                 <span class="title-underline"></span>
               </div>
               <img
-                src="https://picsum.photos/200/200
+                src="https://picsum.photos/200/100
               "
-                class="card-img-top"
+                class="card-img-top img-fluid"
                 alt="picture"
               />
               <div class="card-body">
-                <div class="title-section bg-secondary text-white">{{ featureName }}</div>
+                <div class="title-section bg-light text-secondary">{{ featureName }}</div>
                 <ul>
                   <li
                     class="text-start"
@@ -31,7 +31,7 @@
                     :key="index"
                   >{{ item }}</li>
                 </ul>
-                <div class="title-section bg-secondary text-white">{{ replaceName }}</div>
+                <div class="title-section bg-light text-secondary">{{ replaceName }}</div>
                 <ul>
                   <li
                     class="text-start"
@@ -57,6 +57,9 @@
   </div>
 </template>
 <style lang="scss">
+.page {
+  height: 100vh;
+}
 .card-title-section {
   position: relative;
   margin: 10px;
@@ -99,7 +102,6 @@ ul {
 export default {
   data() {
     return {
-
       pageName: "火星塞",
       featureName: "特色",
       featuresArray: [
