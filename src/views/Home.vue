@@ -1,23 +1,18 @@
 <template>
-  <div class="page m-5">
+  <div class="page h-full m-5">
     <div class="container-fluid">
       <div class="row">
         <div class="col d-flex justify-content-center align-items-center">
           <div class="card-section">
             <div class="card border-0" style="width: 24rem;">
-              <div class="card-title-section">
-                <h5 class="card-title font-bold">{{ pageName }}</h5>
+              <div class="card-title-section position-relative m-3 text-center">
+                <h5 class="card-title fw-bold">{{ pageName }}</h5>
                 <span class="title-underline"></span>
               </div>
-              <img
-                src="https://picsum.photos/200/100
-              "
-                class="card-img-top img-fluid"
-                alt="picture"
-              />
+              <img :src="require('../assets/' + imageName + '.jpeg')" /> class="card-img-top img-fluid" alt="picture" />
               <div class="card-body">
                 <div class="title-section bg-light text-secondary">{{ featureName }}</div>
-                <ul>
+                <ul class="m-3">
                   <li
                     class="text-start"
                     v-for="(item, index) in featuresArray"
@@ -32,7 +27,7 @@
                   >{{ item }}</li>
                 </ul>
                 <div class="title-section bg-light text-secondary">{{ replaceName }}</div>
-                <ul>
+                <ul class="m-3">
                   <li
                     class="text-start"
                     v-for="(item, index) in replaceArray"
@@ -58,14 +53,8 @@
 </template>
 <style lang="scss">
 .page {
-  height: 100vh;
 }
 .card-title-section {
-  position: relative;
-  margin: 10px;
-  text-align: center;
-  .card {
-  }
   .title-underline {
     &::before {
       content: "";
@@ -79,21 +68,8 @@
   }
 }
 ul {
-  margin: 10px;
-  li {
-  }
   li.big-item {
     list-style-image: url("../assets/star-fill.svg");
-    // &::before {
-    //   font-family: "my-icon-font";
-    //   content: "character-code-here";
-    //   position: absolute;
-    //   left: -1em;
-    //   /* same as ul padding-left */
-    //   top: 0.65em;
-    //   /* depends on character, maybe use padding-top instead */
-    //   /*  .... more styling, maybe set width etc ... */
-    // }
   }
 }
 </style>
@@ -115,7 +91,9 @@ export default {
       replaceName: "更換/檢查週期",
       replaceArray: [
         "長效型：每十萬公里"
-      ]
+      ],
+      imageName: "blueCar"
+
     }
   },
   name: 'Home',
