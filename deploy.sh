@@ -9,5 +9,5 @@ git init
 git add -A
 git commit -m 'deploy'
 # 部署到 https://github.com/chou0728/eric-project.git 分支為 gh-pages
-git push -f git@work:MedialandDev/test-lexus.git master:gh-pages
+git push -f git@work:ml-michael/test-lexus.git master:gh-pages
 cd -
